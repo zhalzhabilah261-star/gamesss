@@ -338,7 +338,7 @@
             if (gameState !== 'PLAYING') return;
 
             const currentTime = Date.now();
-            if (currentTime - lastObstacleSpawn < obstacleSpawnInterval / (speed / 3)) { 
+            if (currentTime - lastObstacleSpawn < obstacleSpawnInterval / (speed / 6)) { 
                 return;
             }
             lastObstacleSpawn = currentTime;
@@ -460,7 +460,7 @@
             
             const renderModal = (time) => {
                 const buttonClass = (index) => `w-full my-1 py-3 px-4 font-extrabold rounded-lg transition duration-200 shadow-md 
-                    bg-secondary-color text-white hover:bg-blue-800`;
+                    bg-secondary-color text-black hover:bg-blue-800`;
 
                 modalContent.innerHTML = `
                     <h2 class="text-3xl font-extrabold text-secondary-color mb-3">TES KECEPATAN MATEMATIKA! 🧠</h2>
